@@ -1,0 +1,44 @@
+#include <unistd.h>
+#include <stdio.h>
+#include <fcntl.h>
+#include <string.h>
+#define BUFF_SIZE 10000
+
+int main(int argc, char *argv[])
+
+{
+    int fd;
+
+    fd = open(argv[1], O_RDONLY);
+
+    int nd;
+    nd = open("test.txt", O_RDWR);
+
+    char BUFF[100];
+
+    if (fd != -1 || nd != -1)
+    {
+
+        read(fd, BUFF, 1);
+        char str[100];
+
+        int i = 0;
+        while (str[i] != EOF)
+        {
+            BUFF[i] = str[i];
+
+            if (str[i] == 'l')
+            {
+                str[i] = 'L';
+                BUFF[i] = str[i];
+            }
+
+            i++;
+        }
+    }
+
+    write(4, BUFF, 100);
+    close(fd);
+    close(nd);
+    return 0;
+}

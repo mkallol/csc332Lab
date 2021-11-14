@@ -1,0 +1,4 @@
+Chapter: 1 ->> HW: 1, Average = 11.8
+Chapter: 1 ->> HW: 2, Average = 12.4
+Chapter: 2 ->> HW: 1, Average = 14.1
+Chapter: 2 ->> HW: 2, Average = 13.2
